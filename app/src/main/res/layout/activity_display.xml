@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
+    tools:context=".DisplayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/select"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtAreYouPro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_49sdp"
+                android:layout_marginEnd="@dimen/_65sdp"
+                android:fontFamily="@font/comfortaa_bold"
+                android:letterSpacing="-0.01"
+                android:lineHeight="@dimen/_10ssp"
+                android:text="Are you a Pro?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_27ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSelectedworks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_minus3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/comfortaa_bold"
+                android:letterSpacing="-0.01"
+                android:text="Selected Professions"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                app:layout_constraintStart_toStartOf="@id/txtAreYouPro"
+                app:layout_constraintTop_toBottomOf="@id/txtAreYouPro" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_280sdp"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@id/txtAddYourTeam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSelectedworks" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="@dimen/_86sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:background="@drawable/add_work_btn"
+                android:letterSpacing="0.01"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/txtAddYourTeam"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtAddYourTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_320sdp"
+                android:fontFamily="@font/comfortaa_medium"
+                android:letterSpacing="-0.01"
+                android:lineHeight="22sp"
+                android:text="Add Your Team Members"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSelectedworks" />
+
+            <RelativeLayout
+                android:id="@+id/layoutSingle"
+                android:layout_width="@dimen/_121sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/addsingle_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtAddYourTeam">
+
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/txtAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/imgProfile"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_toEndOf="@id/txtAdd"
+                    android:src="@drawable/line" />
+
+                <ImageButton
+                    android:id="@+id/btnAddTeam"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/line"
+                    android:background="@drawable/plus1" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutTeam"
+                android:layout_width="@dimen/_121sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/addsingle_bg"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtAddYourTeam">
+
+
+                <ImageButton
+                    android:id="@+id/btnMinus"
+                    android:layout_width="@dimen/_31sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:src="@drawable/minus"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgline"
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:src="@drawable/line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnMinus"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtTeamNumber"
+                    android:layout_width="@dimen/_31sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center|center_horizontal"
+                    android:inputType="number|textAutoCorrect"
+                    android:letterSpacing="0.04"
+                    android:lineHeight="@dimen/_18ssp"
+                    android:maxLength="100"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnPlus"
+                    app:layout_constraintStart_toEndOf="@id/imgline"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnPlus"
+                    android:layout_width="@dimen/_31sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:background="@drawable/bg_plus"
+                    android:src="@drawable/plus"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:background="@drawable/button_bg"
+                android:padding="@dimen/_5sdp"
+                android:text="Save &amp; Next"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtAddYourTeam" />
+
+            <TextView
+                android:id="@+id/txtSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:drawableEnd="@drawable/skip"
+                android:drawablePadding="@dimen/_9sdp"
+                android:fontFamily="@font/roboto_light"
+                android:letterSpacing="0.04"
+                android:lineHeight="@dimen/_15ssp"
+                android:text="Skip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnNext" />
+
+            <TextView
+                android:id="@+id/txtBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:drawableStart="@drawable/back"
+                android:drawablePadding="@dimen/_9sdp"
+                android:fontFamily="@font/roboto_light"
+                android:letterSpacing="0.04"
+                android:lineHeight="@dimen/_15ssp"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnNext" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
