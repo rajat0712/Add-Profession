@@ -32,11 +32,10 @@
         android:id="@+id/txtSelectYourWork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_70sdp"
-        android:text="Select your work"
-        android:textSize="@dimen/_25ssp"
+        android:text="Select your profession"
+        android:textSize="@dimen/_20ssp"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textStyle="bold"
@@ -48,7 +47,7 @@
 
     <TextView
         android:id="@+id/txtSelectTheWorkLine"
-        android:text="Select The Work That Best Matches Your\nInterests From The List Below."
+        android:text="Select The Profession That Best Matches Your\nInterests From The List Below."
         android:textSize="@dimen/_10ssp"
         android:maxLines="2"
         android:textStyle="normal"
@@ -58,7 +57,6 @@
         android:layout_marginEnd="@dimen/_31sdp"
         app:layout_constraintStart_toStartOf="@id/txtSelectYourWork"
         app:layout_constraintTop_toBottomOf="@id/txtSelectYourWork"
-        app:layout_constraintEnd_toEndOf="@id/txtSelectYourWork"
         app:layout_constraintBottom_toTopOf="@id/searchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
